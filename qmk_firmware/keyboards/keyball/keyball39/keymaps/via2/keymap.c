@@ -21,22 +21,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 
 #ifdef COMBO_ENABLE
-const uint16_t PROGMEM my_st[] = {KC_S, KC_T, COMBO_END};
-const uint16_t PROGMEM my_tn[] = {KC_T, KC_N, COMBO_END};
-const uint16_t PROGMEM my_sn[] = {KC_S, KC_N, COMBO_END};
-const uint16_t PROGMEM my_stn[] = {KC_S, KC_T, KC_N, COMBO_END};
-const uint16_t PROGMEM my_cv[] = {KC_C, KC_V, COMBO_END};
-const uint16_t PROGMEM my_xc[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM my_st[]   = {KC_S, KC_T, COMBO_END};
+const uint16_t PROGMEM my_tn[]   = {KC_T, KC_N, COMBO_END};
+const uint16_t PROGMEM my_sn[]   = {KC_S, KC_N, COMBO_END};
+const uint16_t PROGMEM my_iue[]  = {KC_I, KC_U, KC_E, COMBO_END};
+const uint16_t PROGMEM my_stn[]  = {KC_S, KC_T, KC_N, COMBO_END};
+const uint16_t PROGMEM my_cv[]   = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM my_xc[]   = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM my_SCSL[] = {KC_SCLN, KC_SLSH, COMBO_END};
 
-combo_t key_combos[] = {
-COMBO(my_st, KC_BTN1) // S + T  = Left Click,
-COMBO(my_tn, KC_BTN2) // T + N  = Right Click,
-COMBO(my_sn, KC_BTN3) // S + N  = Middle Click,
-COMBO(my_stn, KC_ENT) // S + T + N = Enter,
-COMBO(my_cv, KC_TAB) // C + V  = Tab,
-COMBO(my_xc, S(KC_TAB)) // X + C  = Shift + Tab,
-COMBO(my_SCSL, KC_GRV) // ; + / = han/zen,
+const combo_t key_combos[] PROGMEM = {
+  [0] = COMBO(my_st,   KC_BTN1),   // S + T  = Left Click
+  [1] = COMBO(my_tn,   KC_BTN2),   // T + N  = Right Click
+  [2] = COMBO(my_sn,   KC_BTN3),   // S + N  = Middle Click
+  [3] = COMBO(my_iue,  KC_SPC),    // I + U + E = Space
+  [4] = COMBO(my_stn,  KC_ENT),    // S + T + N = Enter
+  [5] = COMBO(my_cv,   KC_TAB),    // C + V  = Tab
+  [6] = COMBO(my_xc,   S(KC_TAB)), // X + C  = Shift + Tab
+  [7] = COMBO(my_SCSL, KC_GRV),    // ; + / = han/zen
 };
 #endif
 
