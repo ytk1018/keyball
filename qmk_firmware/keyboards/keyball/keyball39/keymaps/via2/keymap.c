@@ -30,7 +30,7 @@ const uint16_t PROGMEM my_cv[]   = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM my_xc[]   = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM my_SCSL[] = {KC_SCLN, KC_SLSH, COMBO_END};
 
-const combo_t key_combos[] PROGMEM = {
+combo_t key_combos[] PROGMEM = {
   [0] = COMBO(my_st,   KC_BTN1),   // S + T  = Left Click
   [1] = COMBO(my_tn,   KC_BTN2),   // T + N  = Right Click
   [2] = COMBO(my_sn,   KC_BTN3),   // S + N  = Middle Click
