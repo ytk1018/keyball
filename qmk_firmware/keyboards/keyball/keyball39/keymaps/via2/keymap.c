@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "quantum.h"
 
+// 自前のコンボ定義
 #ifdef COMBO_ENABLE
 const uint16_t PROGMEM my_st[]   = {KC_S, KC_T, COMBO_END};
 const uint16_t PROGMEM my_tn[]   = {KC_T, KC_N, COMBO_END};
@@ -41,6 +42,7 @@ combo_t key_combos[] = {
   [7] = COMBO(my_SCSL, KC_GRV),    // ; + / = han/zen
 };
 #endif
+// ここまで自前のコンボ定義
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
